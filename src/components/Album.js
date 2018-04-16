@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Landing = () => (
-  <section className="landing">
+const Album = () => (
+  <section className="album">
     This is the Album page
   </section>
 );
 
-export default Landing;
+export default Album;
