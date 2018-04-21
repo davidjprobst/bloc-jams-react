@@ -14,12 +14,22 @@ class Album extends Component {
     };
   }
 
+    togglePlaying(index) {
+      const clickedSong = this.state.album.songs[index];
+      clickedSong.isPlaying = clickedSong.isPlaying ? false : true;
+      if (clickedSong.isPlaying === true) {
+        console.log("the song is playing");
+      } else if (clickedSong.isPlaying === false) {
+        console.log("the song is not playing")
+      };
+    }
+
 
   render() {
     return (
       <section className="album">
         <section id="album-info">
-          <img id="album-cover-art" src={this.state.album.albumCover} />
+          <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
           <div className="album-details">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
@@ -34,10 +44,15 @@ class Album extends Component {
           </colgroup>
           <tbody>
             {
-              this.state.album.songs.map( (album,index) =>
-              <div key={index} >
-                <tr>{album.songs.title}</tr>
-              </div>
+              this.state.album.songs.map( (song,index) =>
+              <tr className="song" key={index} onClick={ () => this.togglePlaying(index) }>
+                <td id="song-number-column" className="song-action">
+                  <span className="song-number">{index + 1}</span>
+                  <span className="song-icon">•</span>
+                </td>
+                <td id="song-title-column" className="song-title">{song.title}</td>
+                <td id="song-duration-column" className="song-duration">{song.duration}</td>
+              </tr>
               )
             }
           </tbody>
