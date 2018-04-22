@@ -51,7 +51,7 @@ class Album extends Component {
                   <span className="ion-play"></span>
                 </td>
                 <td id="song-title-column" className="song-title">{song.title}</td>
-                <td id="song-duration-column" className="song-duration">{parseInt(song.duration)}</td>
+                <td id="song-duration-column" className="song-duration">{parseInt(song.duration, 20)}</td>
               </tr>
               )
             }
