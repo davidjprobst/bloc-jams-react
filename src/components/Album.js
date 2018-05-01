@@ -99,8 +99,9 @@ class Album extends Component {
     let seconds = Math.round(s - minutes * 60);
     if (isNaN(seconds)) {
       return "-:--";
-    } else
-    return minutes + ":" + ("0" + seconds).slice(-2);
+    } else {
+      return minutes + ":" + ("0" + seconds).slice(-2);
+    }
   }
 
   handleVolumeChange(e) {
