@@ -163,11 +163,31 @@ nav {
   align-items: center;
 }
 .song-number {
-  padding-right: 16px;
+  display: inline;
+}
+
+.ion-play {
+  display: none;
+}
+
+.ion-pause {
+  display: none;
+}
+
+.song:hover .ion-play {
+  display: inline;
+}
+
+.song:hover .ion-pause {
+  display: inline;
+}
+
+.song:hover .song-number {
+  display: none;
 }
 
 #song-number-column {
-  width: 48px;
+  width: 32px;
 }
 
 #song-title-column {
