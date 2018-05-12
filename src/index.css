@@ -166,19 +166,11 @@ nav {
   display: inline;
 }
 
-.ion-play {
+.song-status {
   display: none;
 }
 
-.ion-pause {
-  display: none;
-}
-
-.song:hover .ion-play {
-  display: inline;
-}
-
-.song:hover .ion-pause {
+.song:hover .song-status {
   display: inline;
 }
 
