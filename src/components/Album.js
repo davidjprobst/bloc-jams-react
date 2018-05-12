@@ -134,7 +134,7 @@ class Album extends Component {
                     >
                       <td id="song-number-column" className="song-action">
                         <span className="song-number">{index + 1}</span>
-                        <span className={ (this.state.isPlaying && song === this.state.currentSong) ? "ion-pause" : "ion-play" }></span>
+                        <span className={ (this.state.isPlaying && song === this.state.currentSong) ? "ion-pause song-status" : "ion-play song-status" }></span>
                       </td>
                       <td id="song-title-column" className="song-title">{song.title}</td>
                       <td id="song-duration-column" className="song-duration">{this.formatTime(song.duration)}</td>
